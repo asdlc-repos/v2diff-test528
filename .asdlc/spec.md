@@ -14,3 +14,6 @@ An API that accepts a long URL and returns a short code that redirects to the or
 - Short codes are unique and don't collide with existing ones.
 - The same long URL can be shortened multiple times and will get a new code each time.
 - Short codes are compact, using letters and numbers.
+
+Additionally, the system must record every redirect event (source IP, user-agent, timestamp) into a separate Analytics Service that exposes a GET /stats/{code} endpoint.
+
